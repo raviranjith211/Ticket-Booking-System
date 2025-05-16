@@ -43,11 +43,11 @@ abstract class Transport {
         for (int i = 0; i < routes.size(); i++) {
             System.out.println((i + 1) + ". " + routes.get(i));
         }
-        System.out.println("💰 Ticket Cost: Rs." + cost);
+        System.out.println(" Ticket Cost: Rs." + cost);
         System.out.print("Choose route (1-" + routes.size() + "): ");
         int choice = Integer.parseInt(scanner.nextLine());
         if (choice < 1 || choice > routes.size()) {
-            System.out.println("❌ Invalid route selection.");
+            System.out.println(" Invalid route selection.");
             return;
         }
 
@@ -59,8 +59,8 @@ abstract class Transport {
 
         Ticket ticket = new Ticket(name, email, type, selectedRoute, cost);
         ticketList.add(ticket);
-        System.out.println("✅ Ticket Booked Successfully!");
-        System.out.println("🎟️ " + ticket);
+        System.out.println(" Ticket Booked Successfully!");
+        System.out.println(" " + ticket);
     }
 }
 
@@ -119,18 +119,18 @@ public class TicketBookingApp {
                     if (bookedTickets.isEmpty()) {
                         System.out.println("No tickets booked yet.");
                     } else {
-                        System.out.println("\n🎫 All Booked Tickets:");
+                        System.out.println("\n All Booked Tickets:");
                         for (Ticket t : bookedTickets) {
                             System.out.println(t);
                         }
                     }
                     break;
                 case "5":
-                    System.out.println("👋 Thanks for using the Ticket Booking App!");
+                    System.out.println(" Thanks for using the Ticket Booking App!");
                     running = false;
                     break;
                 default:
-                    System.out.println("❌ Invalid input. Please try again.");
+                    System.out.println(" Invalid input. Please try again.");
             }
         }
 
